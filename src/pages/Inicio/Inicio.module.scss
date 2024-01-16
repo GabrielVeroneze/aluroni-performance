@@ -1,0 +1,46 @@
+@use '@/sass/variaveis' as *;
+@use '@/sass/breakpoints' as *;
+
+.recomendados {
+    border-radius: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.875rem;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.local {
+    margin-bottom: 6.25rem;
+    position: relative;
+    width: 100%;
+
+    &__imagem {
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    &__endereco {
+        align-items: center;
+        background-color: $escuro;
+        border-radius: 5px;
+        bottom: -45px;
+        color: $branco;
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        height: 100px;
+        justify-content: center;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        width: 200px;
+    }
+}
+
+@media (max-width: $desktop_xsm) {
+    .recomendados {
+        justify-content: space-evenly;
+    }
+}

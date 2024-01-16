@@ -1,0 +1,19 @@
+@use '@/sass/variaveis' as *;
+
+.option {
+    align-items: center;
+    background-color: $cinza;
+    border-top: 2px solid $cinza-claro;
+    color: $preto;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: inherit;
+
+    &:hover,
+    &--ativo {
+        background-color: $azul;
+        color: $branco;
+        cursor: pointer;
+    }
+}

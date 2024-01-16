@@ -1,0 +1,33 @@
+@use '@/sass/variaveis' as *;
+@use '@/sass/breakpoints' as *;
+
+.container {
+    align-items: center;
+    background-color: $cinza;
+    border-radius: 5px;
+    display: flex;
+    gap: 1.125rem;
+    height: 42px;
+    justify-content: space-between;
+    padding: 0 1rem;
+    width: 400px;
+
+    .input {
+        background-color: $cinza;
+        border: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+        outline: none;
+        width: 100%;
+
+        &::placeholder {
+            color: $preto;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .container {
+        width: 100%;
+    }
+}

@@ -1,0 +1,27 @@
+@use '@/sass/variaveis' as *;
+@use '@/sass/breakpoints' as *;
+
+.rodape {
+    background-color: $vermelho;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.625rem $padding-horizontal;
+}
+
+@media (max-width: $desktop_xsm) {
+    .rodape {
+        padding: 0.625rem $padding-horizontal-mobile;
+    }
+}
+
+@media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+    .rodape {
+        padding: 0.625rem $padding-horizontal-sm;
+    }
+}
+
+@media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+    .rodape {
+        padding: 0.625rem $padding-horizontal-md;
+    }
+}

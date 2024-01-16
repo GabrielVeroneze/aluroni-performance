@@ -1,0 +1,43 @@
+@use '@/sass/variaveis' as *;
+@use '@/sass/breakpoints' as *;
+
+.prato {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+    margin-top: 2.75rem;
+
+    &__titulo {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    &__imagem {
+        border-radius: 8px;
+        width: 600px;
+    }
+
+    &__conteudo {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    &__descricao {
+        color: $cinza-mais-escuro;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0;
+    }
+}
+
+@media (max-width: $mobile) {
+    .prato {
+        &__imagem {
+            max-width: 600px;
+            width: 100%;
+        }
+    }
+}

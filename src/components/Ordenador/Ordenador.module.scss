@@ -1,0 +1,35 @@
+@use '@/sass/variaveis' as *;
+
+.ordenador {
+    align-items: center;
+    background-color: $cinza;
+    border: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: flex;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 40px;
+    justify-content: space-between;
+    min-width: 240px;
+    padding: 0 2.5rem;
+    position: relative;
+
+    &--ativo {
+        background-color: $azul;
+        color: $branco;
+    }
+
+    &__options {
+        display: none;
+        flex-direction: column;
+        left: 0;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+
+        &--ativo {
+            display: flex;
+        }
+    }
+}

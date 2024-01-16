@@ -1,0 +1,23 @@
+@use '@/sass/variaveis' as *;
+
+.filtro {
+    align-items: center;
+    background-color: $cinza;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    font-size: 1.25rem;
+    font-weight: bold;
+    height: 40px;
+    justify-content: center;
+    width: 150px;
+
+    &--ativo {
+        background-color: $azul;
+        color: $branco;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

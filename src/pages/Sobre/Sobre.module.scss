@@ -1,0 +1,60 @@
+@use '@/sass/variaveis' as *;
+@use '@/sass/breakpoints' as *;
+
+.sobre {
+    margin-bottom: 3.125rem;
+
+    &__imagem {
+        float: left;
+        margin-right: 1.25rem;
+    }
+
+    &__paragrafo {
+        font-family: $fonte-secundaria;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0 0 2rem;
+        text-align: justify;
+        width: 100%;
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+}
+
+.imagens {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: space-between;
+
+    &__imagem {
+        border-radius: 5px;
+        min-width: 208px;
+        width: 600px;
+    }
+}
+
+@media (max-width: $mobile) {
+    .imagens {
+        align-items: center;
+        flex-direction: column;
+
+        &__imagem {
+            max-width: 600px;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: $desktop_xsm) {
+    .sobre {
+        display: flex;
+        flex-direction: column;
+
+        &__imagem {
+            float: none;
+            margin: 0 0 1.25rem 0;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@use '@/sass/variaveis' as *;
+@use '@/sass/breakpoints' as *;
+
+.menu {
+    display: flex;
+    gap: 1.25rem 3.75rem;
+    padding: 1.25rem $padding-horizontal;
+
+    &__lista {
+        align-items: center;
+        display: flex;
+        gap: 2.5rem;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (max-width: $mobile) {
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1.25rem $padding-horizontal-mobile;
+    }
+}
+
+@media (min-width: $mobile) and (max-width: $desktop_sm) {
+    .menu {
+        padding: 1.25rem $padding-horizontal-sm;
+    }
+}
+
+@media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+    .menu {
+        padding: 1.25rem $padding-horizontal-md;
+    }
+}

@@ -1,0 +1,45 @@
+@use '@/sass/variaveis' as *;
+@use '@/sass/breakpoints' as *;
+
+.header {
+    align-items: center;
+    background-image: url("@/assets/cardapio/header.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 300px;
+    padding: 0 $padding-horizontal;
+
+    &__text {
+        color: $branco;
+        font-size: 5rem;
+        min-width: 400px;
+        width: 40%;
+    }
+}
+
+@media (max-width: $mobile) {
+    .header {
+        padding: 0 $padding-horizontal-mobile;
+
+        &__text {
+            font-size: 4rem;
+            min-width: unset;
+            max-width: 300px;
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: $mobile) and (max-width: $desktop_sm) {
+    .header {
+        padding: 0 $padding-horizontal-sm;
+    }
+}
+
+@media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+    .header {
+        padding: 0 $padding-horizontal-md;
+    }
+}

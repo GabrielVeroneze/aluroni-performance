@@ -1,0 +1,10 @@
+@use '@/sass/variaveis' as *;
+
+.botao {
+    background-color: transparent;
+    border: none;
+    color: $vermelho;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
