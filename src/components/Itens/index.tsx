@@ -1,3 +1,4 @@
+import { memo } from "react"
 import { useNavigate } from "react-router-dom"
 import { ICardapioItem } from "@/interfaces/ICardapioItem"
 import Tags from "@/components/Tags"
@@ -34,4 +35,4 @@ const Itens = ({ item }: ItensProps) => {
     )
 }
 
-export default Itens
+export default memo(Itens)
