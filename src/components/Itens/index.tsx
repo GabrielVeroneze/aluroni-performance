@@ -1,14 +1,14 @@
-import { memo } from "react"
-import { useNavigate } from "react-router-dom"
-import { ICardapioItem } from "@/interfaces/ICardapioItem"
-import Tags from "@/components/Tags"
+import { memo } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { ICardapioItem } from '@/interfaces/ICardapioItem'
+import Tags from '@/components/Tags'
 import styles from './Itens.module.scss'
 
 interface ItensProps {
     item: ICardapioItem
 }
 
-const Itens = ({ item }: ItensProps) => {
+const Itens = memo(({ item }: ItensProps) => {
     const { id, title, description, photo } = item
     const navigate = useNavigate()
 
@@ -33,6 +33,6 @@ const Itens = ({ item }: ItensProps) => {
             </div>
         </div>
     )
-}
+})
 
-export default memo(Itens)
+export default Itens
