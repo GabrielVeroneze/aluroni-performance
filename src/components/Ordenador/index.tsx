@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { memo, useContext, useState } from 'react'
 import { OrdenarContext } from '@/context/Ordenar/OrdenarContext'
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from 'react-icons/md'
 import classNames from 'classnames'
@@ -6,7 +6,7 @@ import Opcao from './Opcao'
 import opcoes from '@/json/opcoes.json'
 import styles from './Ordenador.module.scss'
 
-const Ordenador = () => {
+const Ordenador = memo(() => {
     const [aberto, setAberto] = useState<boolean>(false)
     const { ordenador } = useContext(OrdenarContext)
 
@@ -39,6 +39,6 @@ const Ordenador = () => {
             </div>
         </button>
     )
-}
+})
 
 export default Ordenador

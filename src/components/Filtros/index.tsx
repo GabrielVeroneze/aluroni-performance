@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { useFiltro } from '@/context/Filtro/useFiltro'
 import classNames from 'classnames'
 import styles from './Filtros.module.scss'
@@ -7,7 +8,7 @@ interface FiltrosProps {
     label: string
 }
 
-const Filtros = ({ label, id }: FiltrosProps) => {
+const Filtros = memo(({ label, id }: FiltrosProps) => {
     const { filtro, selecionarFiltro } = useFiltro()
 
     return (
@@ -21,6 +22,6 @@ const Filtros = ({ label, id }: FiltrosProps) => {
             {label}
         </button>
     )
-}
+})
 
 export default Filtros
