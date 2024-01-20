@@ -1,12 +1,14 @@
+import { lazy } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Inicio from '@/pages/Inicio'
-import Cardapio from '@/pages/Cardapio'
 import Sobre from '@/pages/Sobre'
 import NotFound from '@/pages/NotFound'
 import Prato from '@/pages/Prato'
 import Layout from '@/components/Layout'
 import Menu from '@/components/Menu'
 import Rodape from '@/components/Rodape'
+
+const Cardapio = lazy(() => import('@/pages/Cardapio'))
 
 const AppRoutes = () => {
     return (
