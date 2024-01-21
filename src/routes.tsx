@@ -1,4 +1,4 @@
-import { lazy } from 'react'
+import { Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Inicio from '@/pages/Inicio'
 import Sobre from '@/pages/Sobre'
@@ -13,17 +13,19 @@ const Cardapio = lazy(() => import('@/pages/Cardapio'))
 const AppRoutes = () => {
     return (
         <Router>
-            <Menu />
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Inicio />} />
-                    <Route path="cardapio" element={<Cardapio />} />
-                    <Route path="sobre" element={<Sobre />} />
-                </Route>
-                <Route path="prato/:id" element={<Prato />} />
-                <Route path="*" element={<NotFound />} />
-            </Routes>
-            <Rodape />
+            <Suspense fallback={<p>Carregando...</p>}>
+                <Menu />
+                <Routes>
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<Inicio />} />
+                        <Route path="cardapio" element={<Cardapio />} />
+                        <Route path="sobre" element={<Sobre />} />
+                    </Route>
+                    <Route path="prato/:id" element={<Prato />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+                <Rodape />
+            </Suspense>
         </Router>
     )
 }
