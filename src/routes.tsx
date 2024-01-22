@@ -1,14 +1,14 @@
 import { Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Inicio from '@/pages/Inicio'
-import Sobre from '@/pages/Sobre'
-import NotFound from '@/pages/NotFound'
-import Prato from '@/pages/Prato'
-import Layout from '@/components/Layout'
 import Menu from '@/components/Menu'
 import Rodape from '@/components/Rodape'
 
+const Inicio = lazy(() => import('@/pages/Inicio'))
 const Cardapio = lazy(() => import('@/pages/Cardapio'))
+const Sobre = lazy(() => import('@/pages/Sobre'))
+const NotFound = lazy(() => import('@/pages/NotFound'))
+const Prato = lazy(() => import('@/pages/Prato'))
+const Layout = lazy(() => import('@/components/Layout'))
 
 const AppRoutes = () => {
     return (
