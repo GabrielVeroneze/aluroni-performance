@@ -13,8 +13,8 @@ const Layout = lazy(() => import('@/components/Layout'))
 const AppRoutes = () => {
     return (
         <Router>
+            <Menu />
             <Suspense fallback={<p>Carregando...</p>}>
-                <Menu />
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Inicio />} />
@@ -24,8 +24,8 @@ const AppRoutes = () => {
                     <Route path="prato/:id" element={<Prato />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
-                <Rodape />
             </Suspense>
+            <Rodape />
         </Router>
     )
 }
