@@ -1,9 +1,11 @@
+import { lazy } from 'react'
 import { useEncontraPratoDaRota } from '@/hooks/useEncontraPratoDaRota'
-import NotFound from '@/pages/NotFound'
-import Layout from '@/components/Layout'
 import Voltar from '@/components/Voltar'
-import Tags from '@/components/Tags'
 import styles from './Prato.module.scss'
+
+const NotFound = lazy(() => import('@/pages/NotFound'))
+const Layout = lazy(() => import('@/components/Layout'))
+const Tags = lazy(() => import('@/components/Tags'))
 
 const Prato = () => {
     const { prato } = useEncontraPratoDaRota()
